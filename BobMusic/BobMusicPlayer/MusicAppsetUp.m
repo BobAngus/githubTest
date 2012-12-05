@@ -330,4 +330,10 @@
     [self setAutoDownload:nil];
     [super viewDidUnload];
 }
+- (IBAction)testClick:(id)sender {
+//    NSString *temp1;
+//    temp1 = [NSString stringWithFormat:@"Temp"];
+//    [temp1 release];
+//    temp1 
+}
 @end

@@ -40,6 +40,7 @@
 		8D44038C164D5711007ADBB5 /* arrow_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D440383164D5711007ADBB5 /* arrow_top.png */; };
 		8D548E321625BCCF00A87806 /* MyMusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D548E311625BCCF00A87806 /* MyMusicListViewController.m */; };
 		8D548E361625BCEB00A87806 /* iPodMusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D548E351625BCEB00A87806 /* iPodMusicListViewController.m */; };
+		8D607803165E6FE200F6CEF6 /* HorizontalScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D607802165E6FE200F6CEF6 /* HorizontalScreenViewController.m */; };
 		8D683A54163FA98E00CAACD1 /* albumpic_130382_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D683A53163FA98E00CAACD1 /* albumpic_130382_0.jpg */; };
 		8D683A5C163FAA0100CAACD1 /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D683A5B163FAA0100CAACD1 /* UIImage+Reflection.m */; };
 		8D683A67163FB08000CAACD1 /* QQMusicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D683A66163FB08000CAACD1 /* QQMusicPlayerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -231,6 +232,8 @@
 		8D548E311625BCCF00A87806 /* MyMusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMusicListViewController.m; sourceTree = "<group>"; };
 		8D548E341625BCEB00A87806 /* iPodMusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPodMusicListViewController.h; sourceTree = "<group>"; };
 		8D548E351625BCEB00A87806 /* iPodMusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPodMusicListViewController.m; sourceTree = "<group>"; };
+		8D607801165E6FE200F6CEF6 /* HorizontalScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScreenViewController.h; sourceTree = "<group>"; };
+		8D607802165E6FE200F6CEF6 /* HorizontalScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalScreenViewController.m; sourceTree = "<group>"; };
 		8D683A53163FA98E00CAACD1 /* albumpic_130382_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = albumpic_130382_0.jpg; sourceTree = "<group>"; };
 		8D683A5A163FAA0100CAACD1 /* UIImage+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Reflection.h"; sourceTree = "<group>"; };
 		8D683A5B163FAA0100CAACD1 /* UIImage+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Reflection.m"; sourceTree = "<group>"; };
@@ -760,6 +763,8 @@
 				8DB4D08616286123001CCA73 /* MoreButton.xib */,
 				8D6D484E1628239B001EC930 /* TudouListViewController.h */,
 				8D6D484F1628239B001EC930 /* TudouListViewController.m */,
+				8D607801165E6FE200F6CEF6 /* HorizontalScreenViewController.h */,
+				8D607802165E6FE200F6CEF6 /* HorizontalScreenViewController.m */,
 				8D6D4852162823C7001EC930 /* TodouListCell.h */,
 				8D6D4853162823C7001EC930 /* TodouListCell.m */,
 				8D6D4851162823C7001EC930 /* TodouListCell.xib */,
@@ -1179,6 +1184,7 @@
 				8DD3C2971651141000B63B53 /* CERoundProgressLayer.m in Sources */,
 				8D374127165115120070AEC7 /* CEPlayer.m in Sources */,
 				8DF13F77165245C900CBA976 /* GlobalDownloadMusic.m in Sources */,
+				8D607803165E6FE200F6CEF6 /* HorizontalScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

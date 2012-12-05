@@ -17,5 +17,4 @@
 -(void)startDownload:(ASIHTTPRequest *)request;
 -(void)updateCellProgress:(ASIHTTPRequest *)request FileSize:(NSString*)musicFileSize;
 -(void)finishedDownload:(ASIHTTPRequest *)request;
-
 @end

@@ -19,4 +19,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *bcfValues;
 @property (weak, nonatomic) IBOutlet UISwitch *autoDownload;
 
+- (IBAction)testClick:(id)sender;
 @end

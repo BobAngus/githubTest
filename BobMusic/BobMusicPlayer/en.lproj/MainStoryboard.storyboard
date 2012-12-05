@@ -720,7 +720,7 @@ All rights reserved.</string>
                                     <action selector="autoMusicDownload:" destination="Xg2-ie-ynd" eventType="valueChanged" id="OMQ-xO-loH"/>
                                 </connections>
                             </switch>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="omb-n2-cfr">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="omb-n2-cfr">
                                 <rect key="frame" x="20" y="182" width="280" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -728,6 +728,21 @@ All rights reserved.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lmU-Gv-Ngd">
+                                <rect key="frame" x="111" y="154" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="click">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testClick:" destination="Xg2-ie-ynd" eventType="touchUpInside" id="TtL-d6-z8o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -817,7 +832,7 @@ All rights reserved.</string>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vS4-SV-BP2">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" enabled="NO" id="vS4-SV-BP2">
                                             <rect key="frame" x="11" y="36" width="205" height="66"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1046,121 +1061,6 @@ All rights reserved.</string>
         <image name="blackArrow.png" width="23" height="60"/>
         <image name="blueSea.jpg" width="1024" height="768"/>
     </resources>
-    <classes>
-        <class className="IPodMusicPlayerManager" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IPodMusicPlayerManager.h"/>
-            <relationships>
-                <relationship kind="action" name="addGrouping:"/>
-                <relationship kind="action" name="managerPlayer:"/>
-                <relationship kind="action" name="playMode:"/>
-                <relationship kind="action" name="skipToNextItem:"/>
-                <relationship kind="action" name="skipToPreviousItem:"/>
-                <relationship kind="outlet" name="duration" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageAddGrouping" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="imageplayMode" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playOrPause" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="playOrPauseInfo" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="singerName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sliderPlay" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="songTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totaltime" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MusicAppsetUp" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MusicAppsetUp.h"/>
-            <relationships>
-                <relationship kind="action" name="autoMusicDownload:"/>
-                <relationship kind="action" name="cfStyle:"/>
-                <relationship kind="action" name="musicImage:"/>
-                <relationship kind="action" name="musicLyrics:"/>
-                <relationship kind="outlet" name="autoDownload" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="bcfValues" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sMusicImage" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="sMusicLyrics" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="MusicDownloadViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MusicDownloadViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="downloading:"/>
-                <relationship kind="outlet" name="downloadingTitle" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="musicDownloadingTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="musicFinishedTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MusiciCarouselViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MusiciCarouselViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="hearts:"/>
-                <relationship kind="outlet" name="carousel" candidateClass="iCarousel"/>
-                <relationship kind="outlet" name="duration" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lalbumTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lselectalbumTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sliderPlay" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="totaltime" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MyMusicListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyMusicListViewController.h"/>
-        </class>
-        <class className="NewSongListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewSongListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="dowanloadMusic:"/>
-                <relationship kind="outlet" name="qqMusicTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="QQMusicPlayerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QQMusicPlayerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="backScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="iMusicPlaySchedule" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="iMusicPlaySurplus" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ialbumLarge" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="ialbumSmall" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lAlbumName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lSingerName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lSongName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lrcLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pmusicPlayTime" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="selectedLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SongSingleListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SongSingleListViewController.h"/>
-        </class>
-        <class className="TudouListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TudouListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tuDouTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="TudouSearchViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TudouSearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tuDouTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="tudouSearchBar" candidateClass="UISearchBar"/>
-            </relationships>
-        </class>
-        <class className="iCarousel" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iCarousel.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataSource"/>
-                <relationship kind="outlet" name="delegate"/>
-            </relationships>
-        </class>
-        <class className="iPodMusicListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPodMusicListViewController.h"/>
-        </class>
-        <class className="iPodPlayerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPodPlayerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refresh:"/>
-                <relationship kind="outlet" name="musicListView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -12,6 +12,7 @@
 #import "TudouMvInfo.h"
 #import "TodouListCell.h"
 #import "EGORefreshTableHeaderView.h"
+#import "HorizontalScreenViewController.h"
 
 @interface TudouListViewController ()
 
@@ -78,6 +79,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 #pragma mark - Table view data source
@@ -224,22 +226,39 @@
     
     NSString *url = [[NSBundle mainBundle]pathForResource:@"video" ofType:@"mp4"];
     
-    MPMoviePlayerViewController *playerViewController = 
-    [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:url]];//初始化播放器
+    HorizontalScreenViewController *horizontalScreenViewController= 
+    [[HorizontalScreenViewController alloc]initWithContentURL:[NSURL URLWithString:url]];//初始化播放器
     
     [[NSNotificationCenter defaultCenter]addObserver:self 
                                             selector:@selector(movieFinishedCallback:) 
                                                 name:MPMoviePlayerPlaybackDidFinishNotification 
-                                              object:[playerViewController moviePlayer]];//设置监听
+                                              object:[horizontalScreenViewController moviePlayer]];//设置监听
     
-    [playerViewController.view setFrame:CGRectMake(0, -20, 320, 480)];
+    [horizontalScreenViewController.view setFrame:CGRectMake(0, -20, 320, 480)];
     
-    MPMoviePlayerController *player = [playerViewController moviePlayer];
+    MPMoviePlayerController *player = [horizontalScreenViewController moviePlayer];
     NSURL *tempUrl = [NSURL URLWithString:mvinfo.playURL];
     [player setContentURL:tempUrl];
     [player play];
+    [self presentModalViewController:horizontalScreenViewController animated:YES];
     
-    [self presentModalViewController:playerViewController animated:YES];  
+    
+//    MPMoviePlayerViewController *playerViewController = 
+//    [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:url]];//初始化播放器
+//    
+//    [[NSNotificationCenter defaultCenter]addObserver:self 
+//                                            selector:@selector(movieFinishedCallback:) 
+//                                                name:MPMoviePlayerPlaybackDidFinishNotification 
+//                                              object:[playerViewController moviePlayer]];//设置监听
+//    
+//    [playerViewController.view setFrame:CGRectMake(0, -20, 320, 480)];
+//    
+//    MPMoviePlayerController *player = [playerViewController moviePlayer];
+//    NSURL *tempUrl = [NSURL URLWithString:mvinfo.playURL];
+//    [player setContentURL:tempUrl];
+//    [player play];
+//    [self presentModalViewController:playerViewController animated:YES];  
+
 }
 
 //方法类型：系统方法

@@ -221,7 +221,6 @@
                            delegate:nil 
                   cancelButtonTitle:@"ok" 
                   otherButtonTitles:nil]show];
-
     } 
 
 }

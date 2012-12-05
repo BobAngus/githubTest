@@ -86,7 +86,8 @@
             NSRange isGarbledTemp = [jsonTemp2 rangeOfString:@"&#"];
             if(self.delegate)
             {
-                if (isGarbledTemp.length != 0) {
+                if (isGarbledTemp.length != 0) 
+                {
                     [delegate QQMusicSongLrcdownloadFinishedWithResult:[[NSString alloc]initWithString:@"歌词暂无"]];
                 }
                 else {

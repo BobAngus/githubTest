@@ -137,6 +137,7 @@ NSIndexPath *choiceRow;
     else if (indexPath.row == 2) 
     {
        
+        
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

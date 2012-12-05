@@ -27,24 +27,23 @@
 //方法功能：判断是否首次进入，如果首次进入则开启解说界面
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSLog(@"didFinishLaunchingWithOptions 1");
     self.isFistLoadSound=NO;
     [self loadFinishedfiles];
     [self loadTempfiles];
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) { 
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"]; 
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"]; 
-    }
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
-        OpeningViewController *appStartController = [[OpeningViewController alloc] init];
-        self.window.rootViewController = appStartController;
-    }else {
-        UIStoryboard * storyboard = [ UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"mainView"];
-        self.window.rootViewController=controller;
-    }
-    
-    [self.window makeKeyAndVisible];
+//    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) { 
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"]; 
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"]; 
+//    }
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+//        OpeningViewController *appStartController = [[OpeningViewController alloc] init];
+//        self.window.rootViewController = appStartController;
+//    }else {
+//        UIStoryboard * storyboard = [ UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//        UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"mainView"];
+//        self.window.rootViewController=controller;
+//    }
+//    
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }

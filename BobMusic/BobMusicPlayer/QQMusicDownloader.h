@@ -15,7 +15,6 @@
 @interface QQMusicDownloader : NSObject<NSURLConnectionDelegate>{
     NSMutableData *receivedData;
     NSURLConnection *downloadConnection; 
-    NSStringEncoding usingEncoding;
     id<QQMusicDownloaderDelegate> delegate;
 }
 
