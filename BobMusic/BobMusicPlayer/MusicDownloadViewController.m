@@ -336,8 +336,7 @@
         else//已经完成下载的表格
         {
             FileModel *selectFile = [self.finishedList objectAtIndex:indexPath.row];
-            NSString *path = [[CommonHelper getTargetFloderPath]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.temp",selectFile.fileName]];
-            
+            NSString *path = [[CommonHelper getTargetFloderPath]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",selectFile.fileName]];
             [fileManager removeItemAtPath:path error:&error];
             if(!error)
             {
