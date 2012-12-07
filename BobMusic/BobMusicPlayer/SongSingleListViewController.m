@@ -37,7 +37,7 @@
     UIImageView *downingImg=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blueSea.jpg"]];
     downingImg.alpha=0.3f;
     songSingleListTableView.backgroundView=downingImg;
-    songSingleListViewItems = [[NSMutableArray alloc]initWithObjects:@"QQ音乐 新歌榜",@"QQ音乐 总榜",nil];//@"下载音乐",
+    songSingleListViewItems = [[NSMutableArray alloc]initWithObjects:@"新歌榜",@"总榜",nil];//@"下载音乐",
     
     [self.view addSubview:songSingleListTableView];
     [super viewDidLoad];

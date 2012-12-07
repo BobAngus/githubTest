@@ -46,11 +46,11 @@ NSInteger selectRow;
     if ([GlobalMusicPlayRow sharedSingleton].qqMusicHitList) {
         if ([GlobalMusicPlayRow sharedSingleton].qqMusicHitList == @"newSong") 
         {
-            self.navigationItem.title = @"QQ新歌榜";
+            self.navigationItem.title = @"新歌榜";
         }
         else if ([GlobalMusicPlayRow sharedSingleton].qqMusicHitList == @"allSong")
         {
-            self.navigationItem.title = @"QQ 总榜";
+            self.navigationItem.title = @"总榜";
         }
         
     }
